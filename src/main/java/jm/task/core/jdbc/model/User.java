@@ -6,6 +6,16 @@ import javax.persistence.Table;
 
 @Table
 public class User {
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     @Id
     private Long id;
 
@@ -17,10 +27,6 @@ public class User {
 
     @Column
     private Byte age;
-
-    public User() {
-
-    }
 
     public User(String name, String lastName, Byte age) {
         this.name = name;
